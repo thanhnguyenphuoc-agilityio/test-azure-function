@@ -24,7 +24,7 @@ namespace MyAddFunction
             string y = req.Query["y"];
 
 
-            var responseMessage = x + y;
+            var responseMessage = int.Parse(x) + int.Parse(y);
 
             return new OkObjectResult(responseMessage);
         }
