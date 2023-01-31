@@ -26,7 +26,7 @@ namespace MyAddFunction
 
             var responseMessage = int.Parse(x) + int.Parse(y);
 
-            return new OkObjectResult(responseMessage.ToString());
+            return new OkObjectResult(string.Format("The result of {0} + {1} is {2}",x,y, responseMessage.ToString()));
         }
     }
 }
