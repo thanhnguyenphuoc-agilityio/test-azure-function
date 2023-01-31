@@ -21,7 +21,7 @@
     },
     "resourceName": {
       "type": "string",
-      "defaultValue": "MyAddFunction",
+      "defaultValue": "MyFunctionApp9605",
       "metadata": {
         "description": "Name of the main resource to be created by this template."
       }

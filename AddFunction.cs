@@ -26,7 +26,7 @@ namespace MyAddFunction
 
             var responseMessage = int.Parse(x) + int.Parse(y);
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(responseMessage.ToString());
         }
     }
 }
