@@ -1,0 +1,26 @@
+# Function App settings
+name: ExampleFunctionApp
+
+# Trigger
+triggers:
+  - httpTrigger: 
+      authLevel: function
+      methods: [get, post]
+
+# Function code
+functions:
+  Function1:
+    type: httpTrigger
+    path: Function1/run.csx
+    name: Function1
+
+# Logging
+logs:
+  - console: true
+
+# Storage connection string
+# Replace the placeholder with the actual connection string
+# environmentVariable: AzureWebJobsStorage
+
+# Authorization level
+# authLevel: function
