@@ -1,0 +1,32 @@
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+
+namespace MyAddFunction
+{
+    public static class AddFunction
+    {
+        [FunctionName("AddFunction")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
+        {
+            log.LogInformation("C# HTTP trigger function processed a request.");
+
+            string x = req.Query["x"];
+
+            string y = req.Query["y"];
+
+
+            var responseMessage = x + y;
+
+            return new OkObjectResult(responseMessage);
+        }
+    }
+}
